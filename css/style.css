@@ -1,0 +1,45 @@
+body {
+  background: rgb(0, 0, 0);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(198, 187, 187, 0.5);
+  background: white url(../assets/bg.jpg) no-repeat;
+  width: 150px;
+  height: 200px;
+  text-align: center;
+}
+
+.imgContainer {
+  background-image: url("../assets/bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card p {
+  margin: 5px;
+  font-weight: bold;
+}
+
+.name {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
