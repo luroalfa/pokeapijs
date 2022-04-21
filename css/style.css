@@ -23,7 +23,7 @@ h1 {
   box-shadow: 0 3px 15px rgba(198, 187, 187, 0.5);
   background: white url(../assets/bg.jpg) no-repeat;
   width: 150px;
-  height: 200px;
+  height: 100%;
   text-align: center;
 }
 

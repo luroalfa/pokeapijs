@@ -4,7 +4,7 @@ function fetchPoke(id) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     .then(res => res.json())
     .then(data => {
-      console.log(data)
+      console.log(data.abilities[0].ability.name)
       createPoke(data)
     })
 }
@@ -31,14 +31,23 @@ function createPoke(pokemon) {
   const number = document.createElement("p");
   number.textContent = `#${pokemon.id.toString().padStart(3.0)}`
 
-  const name = document.createElement("p");
+  const name = document.createElement("h2");
   name.classList.add("name");
   name.textContent = pokemon.name;
+
+  const abilities = document.createElement("h3");
+  abilities.textContent = "Ability"
+
+
+  const ability = document.createElement("p");
+  ability.textContent = pokemon.abilities[0].ability.name
 
 
   card.appendChild(imgContainer);
   card.appendChild(number);
   card.appendChild(name);
+  card.appendChild(abilities);
+  card.appendChild(ability);
 
   container.appendChild(card);
 }
