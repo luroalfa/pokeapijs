@@ -18,6 +18,11 @@ h1 {
   margin-bottom: 50px;
 }
 
+img{
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
 .card {
   border-radius: 10px;
   box-shadow: 0 3px 15px rgba(198, 187, 187, 0.5);

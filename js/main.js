@@ -4,7 +4,7 @@ function fetchPoke(id) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     .then(res => res.json())
     .then(data => {
-      console.log(data.abilities[0].ability.name)
+      console.log(data)
       createPoke(data)
     })
 }
@@ -24,7 +24,7 @@ function createPoke(pokemon) {
   imgContainer.classList.add("imgContainer");
 
   const sprite = document.createElement("img");
-  sprite.src = pokemon.sprites.front_default;
+  sprite.src = pokemon.sprites.other.dream_world.front_default;
 
   imgContainer.appendChild(sprite);
 
